@@ -1,5 +1,7 @@
-# Generating Mood Playlists w/ K-Means Clustering
+# Generating Mood Playlists w/ Clustering + Classification 
 
 As an avid Spotify user and music lover, I'm a serial playlist maker. But, the playlist-making process is time-consuming as it requires manual assessment of songs that fit the playlist's topic and mood. Sometimes, you probably just want a playlist curated to your tastes but without the hassle of having to search for songs right? Well, this project is one step closer to that.
 
 Traditionally, we can classify songs by mood using Thayer's model of mood. We can associate those moods with a song's musical features such as tempo, valence, energy, rhythm and more. Here's where Spotify's API comes in. The amazing API can provide information on a song's audio features such as valence, energy, instrumentalness, loudness and more. Harnessing this treasure trove of data with machine learning capabilities, we're able to take a deeper look into how similar tracks can be clustered together by their moods, and help us easily make playlists with specific moods to fit that right moment.
+
+In this project, I used clustering to try to identify groups that are similar in audio features and label them with a mood that aligns with the composition of the songs. After labeling my dataset, I proceeded to use different classification techniques such as Gradient Boosting, K-Nearest Neighbors and Naive Bayes to see which approach would be best for classifying a song's mood. 
