@@ -1,16 +1,27 @@
-# Generating Mood Playlists w/ Clustering + Classification 
+# Generating Mood Playlists
 
-As an avid Spotify user and music lover, I'm a serial playlist maker. But, the playlist-making process is time-consuming as it requires manual assessment of songs that fit the playlist's topic and mood. Sometimes, you probably just want a playlist curated to your tastes but without the hassle of having to search for songs right? Well, this project is one step closer to that.
+## Framing the Problem
 
-Traditionally, we can classify songs by mood using Thayer's model of mood. We can associate those moods with a song's musical features such as tempo, valence, energy, rhythm and more. Here's where Spotify's API comes in. The amazing API can provide information on a song's audio features such as valence, energy, instrumentalness, loudness and more. Harnessing this treasure trove of data with machine learning capabilities, we're able to take a deeper look into how similar tracks can be clustered together by their moods, and help us easily make playlists with specific moods to fit that right moment.
+### Business Objective
 
-<<<<<<< HEAD
-In this project, I started off with creating my own large dataset full of tracks from different genres, artists and years with the Spotify API and Spotipy wrapper package. Then, I used that dataset to extract the audio features that I deemed could imply mood through Thayer's mood theory. Next, I pre-processed the data and applied K-means clustering to the normalized dataset. Finally, I generated visualizations and descriptive statistics tables to analyze the clusters and try to put a mood label on the clusters. 
+We would like to improve our approach to recommending music to our users and making better quality playlists that fit a user's different moods. In the long run, we want to do so to increase product value and retain users and market share. This is quite important as we are going against Apple Music, a competiting product that has a considerable portion of market share.
 
-This project is still in progress and here is what is coming soon:
-1. Full analysis report on the clusters.
-2. Making playlists that people can interact with!
-3. Recommending songs based on user's mood and personality type (ft. Classification Methods!)
-=======
-In this project, I used clustering to try to identify groups that are similar in audio features and label them with a mood that aligns with the composition of the songs. After labeling my dataset, I proceeded to use different classification techniques such as Gradient Boosting, K-Nearest Neighbors and Naive Bayes to see which approach would be best for classifying a song's mood. 
->>>>>>> 5d49f97a70cb2109aa729a082d66a974ede14eca
+### The Model
+
+To improve our recommendation system and increasing product value, we have to try to understand what is the relationship between a user's mood and a song's audio features. This field of study is called music emotion recognition (MER) and there has been studies in the past that map this relationship through theoretical models. By applying these models and audio features of different songs to machine learning, we try to find mood structure and patterns within the songs. We will use a Gaussian Mixture Model (GMM) clustering approach to do so and analyze the results to label the dataset. We will also be using the BIC score as a way of determining the number of components/clusters we want to have.
+
+After labeling the dataset, we plan to test out 2 different models to classify the dataset based on the mood it evokes. These models are Random Forest, and Gradient Boosting. (This is in the works.)
+
+### Performance Assessment
+
+There is no way of measuring the performance of our labeling efforts, but we will analyze the result and compare it according to theoretical studies to validate our results in a non-technical manner.
+
+As for our models used to classify the dataset, we'll be using the F1-score and the area under the precision-recall curve as we would like to classify as many songs by their correct mood as possible to minimize inaccuracy of mood class assignment.
+
+### Assumptions
+
+GMM clustering assumes that the data is of a Gaussian mixture distribution and each song are independent from each other.
+
+For classification, both random forest and gradient boosting are non-parametric models.
+
+Resource: https://www.kdnuggets.com/2021/02/machine-learning-assumptions.html
