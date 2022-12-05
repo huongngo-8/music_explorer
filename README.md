@@ -10,7 +10,7 @@ We would like to improve our approach to recommending music to our users and mak
 
 To improve our recommendation system and increasing product value, we have to try to understand what is the relationship between a user's mood and a song's audio features. This field of study is called music emotion recognition (MER) and there has been studies in the past that map this relationship through theoretical models. By applying these models and audio features of different songs to machine learning, we try to find mood structure and patterns within the songs. We will use a Gaussian Mixture Model (GMM) clustering approach to do so and analyze the results to label the dataset. We will also be using the BIC score as a way of determining the number of components/clusters we want to have.
 
-After labeling the dataset, we plan to test out 2 different models to classify the dataset based on the mood it evokes. These models are Random Forest, and Gradient Boosting. (This is in the works.)
+After labeling the dataset, we plan to test out 2 different models to classify the dataset based on the mood it evokes. These models are Random Forest, K-Nearest Neighbors and Gradient Boosting. (This is in the works.)
 
 ### Performance Assessment
 
